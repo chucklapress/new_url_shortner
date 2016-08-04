@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container">
+<h4>Create your book mark</h4>
+<br>
+<form class=""  method="post">
+  {% csrf_token %}
+    {{ form.as_p }}
+<input type="submit" value="Save your BookMark">
+
+</form>
+</div>
+{% endblock %}
